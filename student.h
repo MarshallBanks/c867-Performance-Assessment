@@ -6,6 +6,13 @@ using namespace std;
 
 class Student {
 	public:
+		void SetStudentId
+		void SetFirstName
+		void SetLastName
+		void SetEmailAddress
+		void 
+		void
+
 	
 
 	private:
