@@ -14,17 +14,17 @@ class Student {
 		void SetDaysToCompleteEachCourse();
 		void SetDegreeProgram();
 
-		int SetStudentId(int studentID);
-	    string SetFirstName();
-		string SetLastName();
-		string SetEmailAddress();
-		int SetAge();
-		int SetDaysToCompleteEachCourse();
-		DegreeProgram SetDegreeProgram();
+		int    GetStudentId(int studentID);
+	    string GetFirstName();
+		string GetLastName();
+		string GetEmailAddress();
+		int    GetAge();
+		int    GetDaysToCompleteEachCourse();
+		DegreeProgram GetDegreeProgram();
 
-	
-
-	private:
+		void Print();
+   
+   private:
 		int studentId = 0;
 		string firstName;
 		string lastName;
