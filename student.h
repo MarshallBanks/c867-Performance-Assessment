@@ -7,12 +7,12 @@ using namespace std;
 class Student {
 	public:
 		void SetStudentId(int studentID);
-		void SetFirstName();
-		void SetLastName();
-		void SetEmailAddress();
-		void SetAge();
-		void SetDaysToCompleteEachCourse();
-		void SetDegreeProgram();
+		void SetFirstName(string studentFirstName);
+		void SetLastName(string studentLastName);
+		void SetEmailAddress(string studentEmail);
+		void SetAge(int studentAge);
+		void SetDaysToCompleteEachCourse(); //FIXME: Figure out how to set as array since it's 3 integers.
+		void SetDegreeProgram(int studentDegreeProgram); //FIXME: Verify this is correct to use an int as a parameter.
 
 		int           GetStudentId() const;
 	    string        GetFirstName()  const;
