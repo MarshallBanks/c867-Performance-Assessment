@@ -14,13 +14,13 @@ class Student {
 		void SetDaysToCompleteEachCourse();
 		void SetDegreeProgram();
 
-		int    GetStudentId(int studentID);
-	    string GetFirstName();
-		string GetLastName();
-		string GetEmailAddress();
-		int    GetAge();
-		int    GetDaysToCompleteEachCourse();
-		DegreeProgram GetDegreeProgram();
+		int           GetStudentId() const;
+	    string        GetFirstName()  const;
+		string        GetLastName()   const;
+		string        GetEmailAddress() const;
+		int           GetAge() const;
+		int           GetDaysToCompleteEachCourse() const;
+		DegreeProgram GetDegreeProgram() const;
 
 		void Print();
    
