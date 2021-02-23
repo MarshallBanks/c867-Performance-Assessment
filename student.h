@@ -6,12 +6,21 @@ using namespace std;
 
 class Student {
 	public:
-		void SetStudentId
-		void SetFirstName
-		void SetLastName
-		void SetEmailAddress
-		void 
-		void
+		void SetStudentId(int studentID);
+		void SetFirstName();
+		void SetLastName();
+		void SetEmailAddress();
+		void SetAge();
+		void SetDaysToCompleteEachCourse();
+		void SetDegreeProgram();
+
+		int SetStudentId(int studentID);
+	    string SetFirstName();
+		string SetLastName();
+		string SetEmailAddress();
+		int SetAge();
+		int SetDaysToCompleteEachCourse();
+		DegreeProgram SetDegreeProgram();
 
 	
 
