@@ -6,23 +6,23 @@ using namespace std;
 
 class Student {
 	public:
-		void SetStudentId(int studentID);
-		void SetFirstName(string studentFirstName);
-		void SetLastName(string studentLastName);
-		void SetEmailAddress(string studentEmail);
-		void SetAge(int studentAge);
-		void SetDaysToCompleteEachCourse(); //FIXME: Figure out how to set as array since it's 3 integers.
+		void SetStudentId(int studentID); //FIXME: Define in student.cpp
+		void SetFirstName(string studentFirstName); //FIXME: Define in student.cpp
+		void SetLastName(string studentLastName); //FIXME: Define in student.cpp
+		void SetEmailAddress(string studentEmail); //FIXME: Define in student.cpp
+		void SetAge(int studentAge); //FIXME: Define in student.cpp
+		void SetDaysToCompleteEachCourse(); //FIXME: Define in student.cpp
 		void SetDegreeProgram(int studentDegreeProgram); //FIXME: Verify this is correct to use an int as a parameter.
 
-		int           GetStudentId() const;
-	    string        GetFirstName()  const;
-		string        GetLastName()   const;
-		string        GetEmailAddress() const;
-		int           GetAge() const;
-		int           GetDaysToCompleteEachCourse() const;
-		DegreeProgram GetDegreeProgram() const;
+		int           GetStudentId() const;  //FIXME: Define in student.cpp
+	    string        GetFirstName()  const; //FIXME: Define in student.cpp
+		string        GetLastName()   const; //FIXME: Define in student.cpp
+		string        GetEmailAddress() const; //FIXME: Define in student.cpp
+		int           GetAge() const; //FIXME: Define in student.cpp
+		int*          GetDaysToCompleteEachCourse() const; //FIXME: Define in student.cpp
+		DegreeProgram GetDegreeProgram() const; //FIXME: Define in student.cpp
 
-		void Print();
+		void Print(); //FIXEME: Create a print function
    
    private:
 		int studentId = 0;
