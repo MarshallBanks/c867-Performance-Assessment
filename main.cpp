@@ -19,7 +19,7 @@ int main() {
 	Student marshall;
 
 	marshall.SetFirstName("Marshall");
-	//marshall.SetStudentId("fart");
-	//marshall.SetEmailAddress("marshallmelonhead@hotmail.com");
+	marshall.SetStudentId("0001234");
+	marshall.SetEmailAddress("marshallmelonhead@hotmail.com");
 	return 0;
 }
