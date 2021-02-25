@@ -6,8 +6,8 @@ using namespace std;
 
 class Student {
 	public:
-		void SetStudentId(int iD); 
-		void SetFirstName(string studentFirstName); //FIXME: Define in student.cpp
+		void SetStudentId(string iD); 
+		void SetFirstName(string studentFirstName); 
 		void SetLastName(string studentLastName); //FIXME: Define in student.cpp
 		void SetEmailAddress(string studentEmail); //FIXME: Define in student.cpp
 		void SetAge(int studentAge); //FIXME: Define in student.cpp
@@ -22,10 +22,10 @@ class Student {
 		int*          GetDaysToCompleteEachCourse() const; //FIXME: Define in student.cpp
 		DegreeProgram GetDegreeProgram() const; //FIXME: Define in student.cpp
 
-		void Print(); //FIXEME: Create a print function
+		void Print(); //FIXME: Create a print function
    
    private:
-		int studentId = 0;
+		string studentId = 0;
 		string firstName;
 		string lastName;
 		string emailAddress;

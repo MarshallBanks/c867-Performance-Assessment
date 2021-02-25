@@ -15,5 +15,11 @@ int main() {
 	cout << "Hello World" << endl;
 	cout << "A single change." << endl;
 	//cout << studentData;
+
+	//Student butt;
+
+	//marshall.SetFirstName("Marshall");
+	//marshall.SetStudentId("fart");
+	//marshall.SetEmailAddress("marshallmelonhead@hotmail.com");
 	return 0;
 }
