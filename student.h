@@ -6,7 +6,7 @@ using namespace std;
 
 class Student {
 	public:
-		void SetStudentId(int studentID); //FIXME: Define in student.cpp
+		void SetStudentId(int iD); 
 		void SetFirstName(string studentFirstName); //FIXME: Define in student.cpp
 		void SetLastName(string studentLastName); //FIXME: Define in student.cpp
 		void SetEmailAddress(string studentEmail); //FIXME: Define in student.cpp
