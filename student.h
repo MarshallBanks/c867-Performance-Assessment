@@ -25,7 +25,7 @@ class Student {
 		void Print(); //FIXME: Create a print function
    
    private:
-		string studentId = 0;
+	    string studentId;
 		string firstName;
 		string lastName;
 		string emailAddress;
