@@ -12,7 +12,7 @@ class Student {
 		void SetEmailAddress(string studentEmail); //FIXME: Define in student.cpp
 		void SetAge(int studentAge); //FIXME: Define in student.cpp
 		void SetDaysToCompleteEachCourse(); //FIXME: Define in student.cpp
-		void SetDegreeProgram(int studentDegreeProgram); //FIXME: Verify this is correct to use an int as a parameter.
+		void SetDegreeProgram(DegreeProgram studentDegreeProgram); //FIXME: Verify this is correct to use an int as a parameter.
 
 		int           GetStudentId() const;  //FIXME: Define in student.cpp
 	    string        GetFirstName()  const; //FIXME: Define in student.cpp

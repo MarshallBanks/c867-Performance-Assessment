@@ -24,12 +24,22 @@ void Student::SetLastName(string studentLastName) {
 
 void Student::SetEmailAddress(string studentEmail) {
 	emailAddress = studentEmail;
-	cout << emailAddress; //FIXME: Remove after testing
+	cout << emailAddress << endl; //FIXME: Remove after testing
 	return;
 }
 
 void Student::SetAge(int studentAge) {
 	age = studentAge;
-	cout << age << endl;
+	cout << age << endl; //FIXME: Remove after testing
+	return;
+}
+
+/*void Student::daysToCompleteEachCourse() {
+  FIXME: Finish defining this function. 
+}*/
+
+void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {
+	degreeProgram = studentDegreeProgram;
+	cout << degreeProgram << endl;
 	return;
 }
