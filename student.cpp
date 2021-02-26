@@ -28,4 +28,8 @@ void Student::SetEmailAddress(string studentEmail) {
 	return;
 }
 
-//void Student::Set
+void Student::SetAge(int studentAge) {
+	age = studentAge;
+	cout << age << endl;
+	return;
+}

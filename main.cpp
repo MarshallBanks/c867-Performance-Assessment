@@ -18,8 +18,12 @@ int main() {
 
 	Student marshall;
 
+	marshall.SetStudentId("A5");
 	marshall.SetFirstName("Marshall");
-	marshall.SetStudentId("0001234");
+	marshall.SetLastName("Banks");
 	marshall.SetEmailAddress("marshallmelonhead@hotmail.com");
+	marshall.SetAge(29);
+	//FIXME: finishe setting this up. marshall.SetDaysToCompleteEachCourse();
+	marshall.GetDegreeProgram(SECURITY);
 	return 0;
 }
