@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "student.h"
 #include "roster.h"
 #include "degree.h"
@@ -34,9 +35,10 @@ void Student::SetAge(int studentAge) {
 	return;
 }
 
-void Student::SetDaysToCompleteEachCourse(int course1, int course2, int course3) {
-	
-	daysToCompleteEachCourse
+void Student::SetDaysInCourse(int daysArray[]) {
+	for (i = 0; x < 3; ++i) {
+
+	}
 }
 
 void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {

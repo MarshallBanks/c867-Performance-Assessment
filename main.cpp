@@ -13,8 +13,6 @@ const string studentData[] =
 "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
 "A5,Marshall,Banks,marshallmelonhead@hotmail.com,29,51,59,60,SOFTWARE" };
 
-
-
 int main() {
 	cout << "Hello World" << endl;
 	cout << "A single change." << endl;
@@ -28,6 +26,6 @@ int main() {
 	marshall.SetEmailAddress("marshallmelonhead@hotmail.com");
 	marshall.SetAge(29);
 	//FIXME: Finish setting this up. marshall.SetDaysToCompleteEachCourse();
-	marshall.SetDegreeProgram(SECURITY);
+	marshall.SetDegreeProgram(SOFTWARE);
 	return 0;
 }
