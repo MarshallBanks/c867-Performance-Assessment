@@ -8,11 +8,11 @@ class Student {
 	public:
 		void SetStudentId(string iD); 
 		void SetFirstName(string studentFirstName); 
-		void SetLastName(string studentLastName); //FIXME: Define in student.cpp
-		void SetEmailAddress(string studentEmail); //FIXME: Define in student.cpp
-		void SetAge(int studentAge); //FIXME: Define in student.cpp
+		void SetLastName(string studentLastName); 
+		void SetEmailAddress(string studentEmail); 
+		void SetAge(int studentAge); 
 		void SetDaysToCompleteEachCourse(); //FIXME: Define in student.cpp
-		void SetDegreeProgram(DegreeProgram studentDegreeProgram); //FIXME: Verify this is correct to use an int as a parameter.
+		void SetDegreeProgram(DegreeProgram studentDegreeProgram); 
 
 		int           GetStudentId() const;  //FIXME: Define in student.cpp
 	    string        GetFirstName()  const; //FIXME: Define in student.cpp

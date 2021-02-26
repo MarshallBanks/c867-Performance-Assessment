@@ -34,9 +34,9 @@ void Student::SetAge(int studentAge) {
 	return;
 }
 
-/*void Student::daysToCompleteEachCourse() {
-  FIXME: Finish defining this function. 
-}*/
+void Student::SetDaysToCompleteEachCourse() {
+  
+}
 
 void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {
 	degreeProgram = studentDegreeProgram;
