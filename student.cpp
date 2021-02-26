@@ -34,8 +34,9 @@ void Student::SetAge(int studentAge) {
 	return;
 }
 
-void Student::SetDaysToCompleteEachCourse() {
-  
+void Student::SetDaysToCompleteEachCourse(int course1, int course2, int course3) {
+	
+	daysToCompleteEachCourse
 }
 
 void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {
