@@ -19,7 +19,7 @@ class Student {
 		string        GetLastName()   const; //FIXME: Define in student.cpp
 		string        GetEmailAddress() const; //FIXME: Define in student.cpp
 		int           GetAge() const; //FIXME: Define in student.cpp
-		int           GetDaysInCourse() const; //FIXME: Define in student.cpp
+		int*          GetDaysInCourse() const; //FIXME: Define in student.cpp
 		DegreeProgram GetDegreeProgram() const; //FIXME: Define in student.cpp
 
 		void Print(); //FIXME: Create a print function
