@@ -14,6 +14,10 @@ int main() {
 	"A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
 	"A5,Marshall,Banks,marshallmelonhead@hotmail.com,29,51,59,60,SOFTWARE" };
 
+	cout << "Scripting and Programming - Applications" << endl;
+	cout << "C++" << endl;
+	cout << "ID#: 000616668" << endl;
+	cout << "Marshall Banks" << endl;
 
 	Student marshall;
 

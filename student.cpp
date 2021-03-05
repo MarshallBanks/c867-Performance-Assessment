@@ -5,7 +5,7 @@ using namespace std;
 
 void Student::SetStudentId(string iD) {
 	studentId = iD;
-	cout << studentId << endl; //FIXME: Remove after testing
+	cout << "\n" << studentId << endl; //FIXME: Remove after testing
 	return;
 }
 
@@ -17,7 +17,7 @@ void Student::SetFirstName(string studentFirstName) {
 
 void Student::SetLastName(string studentLastName) {
 	lastName = studentLastName;
-	cout << lastName; //FIXME: Remove after testing
+	cout << lastName << endl; //FIXME: Remove after testing
 	return;
 }
 
