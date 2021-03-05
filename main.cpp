@@ -2,7 +2,6 @@
 #include <string>
 #include "student.h"
 #include "roster.h"
-#include "degree.h"
 using namespace std;
 
 const string studentData[] =

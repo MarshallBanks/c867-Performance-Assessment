@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 #include "student.h"
-#include "roster.h"
-#include "degree.h"
 using namespace std;
 
 void Student::SetStudentId(string iD) {
@@ -36,7 +34,8 @@ void Student::SetAge(int studentAge) {
 }
 
 void Student::SetDaysInCourse(int daysArray[]) {
-	for (i = 0; x < 3; ++i) {
+	int i = 0;
+	for (i = 0; i < 3; ++i) {
 
 	}
 }
