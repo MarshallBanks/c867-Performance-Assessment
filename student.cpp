@@ -33,11 +33,8 @@ void Student::SetAge(int studentAge) {
 	return;
 }
 
-void Student::SetDaysInCourse(int daysArray[]) {
-	int i = 0;
-	for (i = 0; i < 3; ++i) {
-
-	}
+void Student::SetDaysInCourse(int day1, int day2, int day3) {
+	//FIXME: Define and change paramters if need be. 
 }
 
 void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {

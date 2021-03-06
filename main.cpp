@@ -26,7 +26,7 @@ int main() {
 	marshall.SetLastName("Banks");
 	marshall.SetEmailAddress("marshallmelonhead@hotmail.com");
 	marshall.SetAge(29);
-	//FIXME: Finish setting this up. marshall.SetDaysToCompleteEachCourse();
+	marshall.SetDaysInCourse(1,2,3);
 	marshall.SetDegreeProgram(SOFTWARE);
 	return 0;
 }
