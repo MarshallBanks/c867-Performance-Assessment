@@ -3,6 +3,7 @@
 #include "student.h"
 using namespace std;
 
+
 void Student::SetStudentId(string iD) {
 	studentId = iD;
 	cout << "\n" << studentId << endl; //FIXME: Remove after testing
@@ -41,4 +42,15 @@ void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {
 	degreeProgram = studentDegreeProgram;
 	cout << degreeProgram << endl;
 	return;
+}
+//FIXME: FINISH CONSTRUCTOR
+//Default Constructor
+Student::Student() {
+	studentId = "NoId";
+	firstName = "NoName";
+	lastName  = "NoName";
+	emailAddress = "NoAddress";
+	age = 0;
+	//daysInCourse[2] = 
+
 }

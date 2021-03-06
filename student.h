@@ -13,6 +13,7 @@ class Student {
 		void SetAge(int studentAge); 
 		void SetDaysInCourse(int day1, int day2, int day3); //FIXME: Define in student.cpp
 		void SetDegreeProgram(DegreeProgram studentDegreeProgram); 
+		Student(); //Default Constructor
 
 		int           GetStudentId() const;  //FIXME: Define in student.cpp
 	    string        GetFirstName()  const; //FIXME: Define in student.cpp
@@ -29,7 +30,7 @@ class Student {
 		string firstName;
 		string lastName;
 		string emailAddress;
-		int age = 0;
+		int age;
 		int daysInCourse[2];
 		DegreeProgram degreeProgram; 
 };
