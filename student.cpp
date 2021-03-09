@@ -6,75 +6,77 @@ using namespace std;
 
 void Student::SetStudentId(string iD) {
 	studentId = iD;
-	cout << "\n" << studentId << endl; //FIXME: Remove after testing
+
 	return;
 }
 
 void Student::SetFirstName(string studentFirstName) {
 	firstName = studentFirstName;
-	cout << firstName << endl; //FIXME: Remove after testing
+
 	return;
 }
 
 void Student::SetLastName(string studentLastName) {
 	lastName = studentLastName;
-	cout << lastName << endl; //FIXME: Remove after testing
+
 	return;
 }
 
 void Student::SetEmailAddress(string studentEmail) {
 	emailAddress = studentEmail;
-	cout << emailAddress << endl; //FIXME: Remove after testing
 	return;
 }
 
 void Student::SetAge(int studentAge) {
 	age = studentAge;
-	cout << age << endl; //FIXME: Remove after testing
+
 	return;
 }
 
 void Student::SetDaysInCourse(int day1, int day2, int day3) {
-	cout << "FIXME: Finish defining SetDaysInCourse" << endl;
+	//cout << "FIXME: Finish defining SetDaysInCourse" << endl;
+
+	return;
 }
 
 void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {
 	degreeProgram = studentDegreeProgram;
-	cout << degreeProgram << endl;
 	return;
 }
 
-int Student::GetStudentId() const {
-	cout << "FIXME: Finish defining GetStudentId" << endl;
+string Student::GetStudentId() const {
+	return studentId;
 }
 
 string Student::GetFirstName() const {
-	cout << "FIXME: Finish defining GetFirstName" << endl;
+	return firstName;
 }
 
 string Student::GetLastName() const {
-	cout << "FIXME: Finish defining GetLastName" << endl;
+	return lastName;
 }
 
 string Student::GetEmailAddress() const {
-	cout << "FIXME: Finish defining GetEmailAddress" << endl;
+	return emailAddress;
 }
 
 int Student::GetAge() const {
-	cout << "FIXME: Finish defining GetAge" << endl;
+	return age;
 }
 
 int* Student::GetDaysInCourse() const {
 	cout << "FIXME: Finish Defining GetDaysInCourse" << endl;
+
+    return 0;
 }
 
 DegreeProgram Student::GetDegreeProgram() const {
-	cout << "FIXME: Finish defining GetDegreeProgram" << endl;
+	return degreeProgram;
 }
 
 
 
-//FIXME: FINISH CONSTRUCTOR
+/*FIXME: FINISH CONSTRUCTOR
 //Default Constructor
 Student::Student() {
 	studentId = "NoId";
@@ -84,4 +86,4 @@ Student::Student() {
 	age = 0;
 	//daysInCourse[2] = 
 
-}
+}*/

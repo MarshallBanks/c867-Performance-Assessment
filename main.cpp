@@ -16,8 +16,8 @@ int main() {
 
 	cout << "Scripting and Programming - Applications" << endl;
 	cout << "C++" << endl;
-	cout << "ID#: 000616668" << endl;
-	cout << "Marshall Banks" << endl;
+	cout << "Student ID#: 000616668" << endl;
+	cout << "Marshall Banks\n" << endl;
 
 	Student marshall;
 
@@ -28,5 +28,15 @@ int main() {
 	marshall.SetAge(29);
 	marshall.SetDaysInCourse(1,2,3);
 	marshall.SetDegreeProgram(SOFTWARE);
+
+	cout << marshall.GetStudentId() << endl;
+	cout << marshall.GetFirstName() << endl;
+	cout << marshall.GetLastName() << endl;
+	cout << marshall.GetEmailAddress() << endl;
+	cout << marshall.GetAge() << endl;
+	cout << marshall.GetDaysInCourse() << endl;
+	cout << marshall.GetDegreeProgram() << endl;
+
+
 	return 0;
 }
