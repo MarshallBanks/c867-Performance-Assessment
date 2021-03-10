@@ -26,7 +26,7 @@ int main() {
 	marshall.SetLastName("Banks");
 	marshall.SetEmailAddress("marshallmelonhead@hotmail.com");
 	marshall.SetAge(29);
-	marshall.SetDaysInCourse(1,2,3);
+	marshall.SetDaysToCompleteCourse();
 	marshall.SetDegreeProgram(SOFTWARE);
 
 	cout << marshall.GetStudentId() << endl;
@@ -34,7 +34,7 @@ int main() {
 	cout << marshall.GetLastName() << endl;
 	cout << marshall.GetEmailAddress() << endl;
 	cout << marshall.GetAge() << endl;
-	cout << marshall.GetDaysInCourse() << endl;
+	cout << marshall.GetDaysToCompleteCourse() << endl;
 	cout << marshall.GetDegreeProgram() << endl;
 
 

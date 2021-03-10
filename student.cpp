@@ -33,8 +33,10 @@ void Student::SetAge(int studentAge) {
 	return;
 }
 
-void Student::SetDaysInCourse(int day1, int day2, int day3) {
-	//cout << "FIXME: Finish defining SetDaysInCourse" << endl;
+void Student::SetDaysToCompleteCourse(int* days) {
+	this->daysToCompleteCourse[0] = days[0];
+	this->daysToCompleteCourse[1] = days[1];
+	this->daysToCompleteCourse[2] = days[2];
 
 	return;
 }
@@ -64,7 +66,7 @@ int Student::GetAge() const {
 	return age;
 }
 
-int* Student::GetDaysInCourse() const {
+int* Student::GetDaysToCompleteCourse() const {
 	cout << "FIXME: Finish Defining GetDaysInCourse" << endl;
 
     return 0;
@@ -76,7 +78,7 @@ DegreeProgram Student::GetDegreeProgram() const {
 
 
 
-/*FIXME: FINISH CONSTRUCTOR
+//FIXME: FINISH CONSTRUCTOR
 //Default Constructor
 Student::Student() {
 	studentId = "NoId";
@@ -84,6 +86,6 @@ Student::Student() {
 	lastName  = "NoName";
 	emailAddress = "NoAddress";
 	age = 0;
-	//daysInCourse[2] = 
+	//daysInCourse[3] = { 0, 0, 0 };
 
-}*/
+}
