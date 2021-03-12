@@ -75,8 +75,6 @@ DegreeProgram Student::GetDegreeProgram() const {
 }
 
 
-
-//FIXME: FINISH CONSTRUCTOR
 //Default Constructor
 Student::Student() {
 	studentId = "NoId";
