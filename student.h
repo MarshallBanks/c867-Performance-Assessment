@@ -15,11 +15,11 @@ class Student {
 		void SetDegreeProgram(DegreeProgram studentDegreeProgram); 
 		Student(); 
 
-		string        GetStudentId() const;  //FIXME: Define in student.cpp
-	    string        GetFirstName()  const; //FIXME: Define in student.cpp
-		string        GetLastName()   const; //FIXME: Define in student.cpp
-		string        GetEmailAddress() const; //FIXME: Define in student.cpp
-		int           GetAge() const; //FIXME: Define in student.cpp
+		string        GetStudentId() const;  
+	    string        GetFirstName() const; 
+		string        GetLastName() const; 
+		string        GetEmailAddress() const; 
+		int           GetAge() const; 
 		const int*    GetDaysToCompleteCourse() const; //FIXME: Define in student.cpp
 		DegreeProgram GetDegreeProgram() const; //FIXME: Define in student.cpp
 

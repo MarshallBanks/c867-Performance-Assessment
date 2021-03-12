@@ -36,7 +36,14 @@ int main() {
 	cout << marshall.GetLastName() << endl;
 	cout << marshall.GetEmailAddress() << endl;
 	cout << marshall.GetAge() << endl;
-	cout << marshall.GetDaysToCompleteCourse() << endl;
+
+	//Loop to print each value in array marshall.daysToCompleteCourse
+	for (int i = 0; i < Student::SIZE; ++i) {
+		cout << marshall.GetDaysToCompleteCourse()[i] << " "; 
+		if (i == Student::SIZE - 1) { //New line at the end of the array for readability
+			cout << endl;
+		}
+	}
 	cout << marshall.GetDegreeProgram() << endl;
 
 
