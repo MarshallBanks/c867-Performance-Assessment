@@ -33,11 +33,11 @@ void Student::SetAge(int studentAge) {
 	return;
 }
 
-void Student::SetDaysToCompleteCourse(int* days) {
-	this->daysToCompleteCourse[0] = days[0];
-	this->daysToCompleteCourse[1] = days[1];
-	this->daysToCompleteCourse[2] = days[2];
-
+void Student::SetDaysToCompleteCourse(int* newDays) {
+	int i = 0; //loop variable
+	for (i = 0; i < SIZE; ++i) {
+		daysToCompleteCourse[i] = newDays[i];
+	}
 	return;
 }
 
@@ -66,10 +66,8 @@ int Student::GetAge() const {
 	return age;
 }
 
-int* Student::GetDaysToCompleteCourse() const {
-	cout << "FIXME: Finish Defining GetDaysInCourse" << endl;
-
-    return 0;
+const int* Student::GetDaysToCompleteCourse() const {
+	return daysToCompleteCourse;
 }
 
 DegreeProgram Student::GetDegreeProgram() const {
@@ -86,6 +84,8 @@ Student::Student() {
 	lastName  = "NoName";
 	emailAddress = "NoAddress";
 	age = 0;
-	//daysInCourse[3] = { 0, 0, 0 };
-
+	for (int i = 0; i < SIZE; ++i) {
+		daysToCompleteCourse[i] = 0;
+	}
+	degreeProgram = SOFTWARE;
 }

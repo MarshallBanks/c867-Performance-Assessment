@@ -21,12 +21,14 @@ int main() {
 
 	Student marshall;
 
+	int marshallDays[3] = { 51, 59, 60 };
+
 	marshall.SetStudentId("A5");
 	marshall.SetFirstName("Marshall");
 	marshall.SetLastName("Banks");
 	marshall.SetEmailAddress("marshallmelonhead@hotmail.com");
 	marshall.SetAge(29);
-	marshall.SetDaysToCompleteCourse();
+	marshall.SetDaysToCompleteCourse(marshallDays);
 	marshall.SetDegreeProgram(SOFTWARE);
 
 	cout << marshall.GetStudentId() << endl;
