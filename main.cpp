@@ -22,21 +22,21 @@ int main() {
 
 	Student marshall;
 
-	int marshallDays[3] = { 51, 59, 60 };
+	int marshallDays[3] = { 51, 59, 60 }; //FIXME: For iterative testing
 
-	marshall.SetStudentId("A5");
-	marshall.SetFirstName("Marshall");
-	marshall.SetLastName("Banks");
-	marshall.SetEmailAddress("marshallmelonhead@hotmail.com");
-	marshall.SetAge(29);
-	marshall.SetDaysToCompleteCourse(marshallDays);
-	marshall.SetDegreeProgram(SOFTWARE);
+	marshall.SetStudentId("A5"); //FIXME: For iterative testing
+	marshall.SetFirstName("Marshall"); //FIXME: For iterative testing
+	marshall.SetLastName("Banks"); //FIXME: For iterative testing
+	marshall.SetEmailAddress("marshallmelonhead@hotmail.com"); //FIXME: For iterative testing
+	marshall.SetAge(29); //FIXME: For iterative testing
+	marshall.SetDaysToCompleteCourse(marshallDays); //FIXME: For iterative testing
+	marshall.SetDegreeProgram(SOFTWARE); //FIXME: For iterative testing
 
-	cout << marshall.GetStudentId() << endl;
-	cout << marshall.GetFirstName() << endl;
-	cout << marshall.GetLastName() << endl;
-	cout << marshall.GetEmailAddress() << endl;
-	cout << marshall.GetAge() << endl;
+	cout << marshall.GetStudentId() << endl; //FIXME: For iterative testing
+	cout << marshall.GetFirstName() << endl; //FIXME: For iterative testing
+	cout << marshall.GetLastName() << endl; //FIXME: For iterative testing
+	cout << marshall.GetEmailAddress() << endl; //FIXME: For iterative testing
+	cout << marshall.GetAge() << endl; //FIXME: For iterative testing
 
 	//Loop to print each value in array marshall.daysToCompleteCourse
 	for (int i = 0; i < Student::SIZE; ++i) {
@@ -45,9 +45,9 @@ int main() {
 			cout << endl;
 		}
 	}
-	cout << marshall.GetDegreeProgram() << endl;
+	cout << marshall.GetDegreeProgram() << endl; //FIXME: For iterative testing
 
-	marshall.Print();
+	marshall.Print(); //FIXME: For iterative testing
 
 
 	return 0;
