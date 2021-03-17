@@ -29,7 +29,6 @@ void Student::SetEmailAddress(string studentEmail) {
 
 void Student::SetAge(int studentAge) {
 	age = studentAge;
-
 	return;
 }
 
@@ -72,6 +71,12 @@ const int* Student::GetDaysToCompleteCourse() const {
 
 DegreeProgram Student::GetDegreeProgram() const {
 	return degreeProgram;
+}
+
+void Student::Print() {
+	cout << "FIXME: Finish defining Print(); when you know it will be used" << endl;
+
+	return;
 }
 
 

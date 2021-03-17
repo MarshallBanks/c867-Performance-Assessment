@@ -15,10 +15,10 @@ int main() {
 	"A5,Marshall,Banks,marshallmelonhead@hotmail.com,29,51,59,60,SOFTWARE" };
 
 
-	cout << "Scripting and Programming - Applications" << endl;
-	cout << "C++" << endl;
+	cout << "C867-Scripting and Programming: Applications" << endl;
+	cout << "Language: C++" << endl;
 	cout << "Student ID#: 000616668" << endl;
-	cout << "Marshall Banks\n" << endl;
+	cout << "Name: Marshall Banks\n" << endl;
 
 	Student marshall;
 
@@ -46,6 +46,8 @@ int main() {
 		}
 	}
 	cout << marshall.GetDegreeProgram() << endl;
+
+	marshall.Print();
 
 
 	return 0;
