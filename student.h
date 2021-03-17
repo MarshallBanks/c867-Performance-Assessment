@@ -11,7 +11,7 @@ class Student {
 		void SetLastName(string studentLastName); 
 		void SetEmailAddress(string studentEmail); 
 		void SetAge(int studentAge); 
-		void SetDaysToCompleteCourse(int* newDays); //FIXME: Define in student.cpp
+		void SetDaysToCompleteCourse(int* newDays); 
 		void SetDegreeProgram(DegreeProgram studentDegreeProgram); 
 		Student(); 
 
@@ -20,7 +20,7 @@ class Student {
 		string        GetLastName() const; 
 		string        GetEmailAddress() const; 
 		int           GetAge() const; 
-		const int*    GetDaysToCompleteCourse() const; //FIXME: Define in student.cpp
+		const int*    GetDaysToCompleteCourse() const; 
 		DegreeProgram GetDegreeProgram() const; //FIXME: Define in student.cpp
 
 		void Print(); //FIXME: Create a print function
