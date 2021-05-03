@@ -32,10 +32,10 @@ void Student::SetAge(int studentAge) {
 	return;
 }
 
-void Student::SetDaysToCompleteCourse(int* newDays) {
+void Student::SetDaysToCompleteEachCourse(int* newDays) {
 	int i = 0; //loop variable
 	for (i = 0; i < SIZE; ++i) {
-		daysToCompleteCourse[i] = newDays[i];
+		daysToCompleteEachCourse[i] = newDays[i];
 	}
 	return;
 }
@@ -65,8 +65,8 @@ int Student::GetAge() const {
 	return age;
 }
 
-const int* Student::GetDaysToCompleteCourse() const {
-	return daysToCompleteCourse;
+const int* Student::GetDaysToCompleteEachCourse() const {
+	return daysToCompleteEachCourse;
 }
 
 DegreeProgram Student::GetDegreeProgram() const {
@@ -88,7 +88,7 @@ Student::Student() {
 	emailAddress = "NoAddress";
 	age = 0;
 	for (int i = 0; i < SIZE; ++i) {
-		daysToCompleteCourse[i] = 0;
+		daysToCompleteEachCourse[i] = 0;
 	}
 	degreeProgram = SOFTWARE;
 }

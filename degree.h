@@ -2,4 +2,6 @@
 #include <string>
 using namespace std;
 #pragma once
-enum DegreeProgram {SECURITY, NETWORK, SOFTWARE};
+enum class DegreeProgram { SECURITY, NETWORK, SOFTWARE };
+string degreeTypeStrings [] = { "SECURITY", "NETWORK, SOFTWARE" };
+
