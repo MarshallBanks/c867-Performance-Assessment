@@ -1,18 +1,20 @@
+#ifndef student_h
+#define student_h
 #include <iostream>
-#pragma once
 #include <string>
 #include "degree.h"
 using namespace std;
 
 class Student {
 	public:
+
 		void SetStudentId(string iD); 
 		void SetFirstName(string studentFirstName); 
 		void SetLastName(string studentLastName); 
 		void SetEmailAddress(string studentEmail); 
 		void SetAge(int studentAge); 
 		void SetDaysToCompleteEachCourse(int* newDays); 
-		void SetDegreeProgram(DegreeProgram studentDegreeProgram); 
+		void SetDegreeProgram(DegreeProgram degreeProgram); 
 		Student(); 
 
 		string        GetStudentId() const;  
@@ -21,7 +23,7 @@ class Student {
 		string        GetEmailAddress() const; 
 		int           GetAge() const; 
 		const int*    GetDaysToCompleteEachCourse() const; 
-		DegreeProgram GetDegreeProgram() const; //FIXME: Define in student.cpp to return a string
+		DegreeProgram GetDegreeProgram() const; 
 
 		void Print(); //FIXME: Create a print function
 
@@ -36,3 +38,5 @@ class Student {
 		int daysToCompleteEachCourse[SIZE];
 		DegreeProgram degreeProgram; 
 };
+
+#endif

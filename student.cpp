@@ -74,7 +74,29 @@ DegreeProgram Student::GetDegreeProgram() const {
 }
 
 void Student::Print() {
-	cout << "FIXME: Finish defining Print(); when you know it will be used" << endl;
+	cout << studentId << '\t' << "First name: " << firstName << '\t' << "Last name: " << lastName << '\t';
+	cout << "Email: " << emailAddress << '\t' << "Age: " << age << '\t' << "Days In Course: ";
+	cout << "{";
+
+	int i = 0;
+	for (i = 0; i < SIZE; ++i) {
+		cout << daysToCompleteEachCourse[i];
+		if (i != SIZE - 1) {
+			cout << ", ";
+		}
+	}
+
+	cout << "}" << '\t' << "Degree Program: ";
+
+	if (degreeProgram == SECURITY) {
+		cout << "SECURITY" << endl;
+	}
+	else if (degreeProgram == NETWORK) {
+		cout << "NETWORK" << endl;
+	}
+	else {
+		cout << "SOFTWARE" << endl;
+	}
 
 	return;
 }
@@ -92,3 +114,4 @@ Student::Student() {
 	}
 	degreeProgram = SOFTWARE;
 }
+

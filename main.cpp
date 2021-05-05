@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <sstream>
 #include "student.h"
 #include "roster.h"
 
@@ -17,13 +16,15 @@ int main() {
 		"A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
 		"A5,Marshall,Banks,marshallmelonhead@hotmail.com,29,51,59,60,SOFTWARE"
 	};
+
 	cout << "C867-Scripting and Programming: Applications" << endl;
 	cout << "Language: C++" << endl;
 	cout << "Student ID#: 000616668" << endl;
 	cout << "Name: Marshall Banks\n" << endl;
 
+	Student marshall; //FIXME: for iterative testing only. 
 
-	
+	marshall.Print(); //FIXME: for test iterative testing only. 
 
 	return 0;
 }
