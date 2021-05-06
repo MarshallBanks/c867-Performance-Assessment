@@ -1,4 +1,13 @@
 #include "roster.h"
+#include "student.h"
+#include <vector>
+#include <iostream>
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+
 
 //Need to fix so it can grab studentData[] from main.cpp
 /*void Roster::parse() {

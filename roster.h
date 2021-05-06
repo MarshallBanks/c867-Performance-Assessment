@@ -1,5 +1,6 @@
+#ifndef roster_h
+#define roster_h
 #include <iostream>
-#pragma once
 #include <string>
 #include <vector>
 #include <sstream>
@@ -9,23 +10,25 @@ using namespace std;
 const int numStudents = 5;
 
 class Roster {
-	private:
-		Student * classRosterArray[5];
-		Student A1;
-		Student A2;
-		Student A3;
-		Student A4;
-		Student A5;
 	public:
 		void add(string studentID, string firstName, string lastName,
-			string emailAddress, int age, int daysInCourse1, int daysInCourse2,
-			int daysInCourse3, DegreeProgram degreeprogram);
+		   string emailAddress, int age, int daysInCourse1, int daysInCourse2,
+		   int daysInCourse3, DegreeProgram degreeprogram);
 		void remove(string studentID);
 		void printAll();
 		void printAverageDaysInCourse(string studentID);
 		void printInvalidEmails();
 		void parse();
+		//Roster(); FIXME: Need to define in cpp
+		//~Roster(); FIXME: Need to define in cpp
+
+	private:
+		Student * classRosterArray[5];
+		
+	
 
 
 
 };
+
+#endif
