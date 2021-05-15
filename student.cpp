@@ -1,9 +1,34 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "student.h"
 using namespace std;
 
 
+//Empty Constructor
+Student::Student() {
+	this->studentId    = "";
+	this->firstName    = "";
+	this->lastName     = "";
+	this->emailAddress = "";
+	this->age = 0;
+	for (int i = 0; i < DAYS_ARRAY_SIZE; ++i) this->daysToCompleteEachCourse[i] = 0;
+	
+	
+}
+
+//Full constructor
+Student::Student(string ID, string fname, string lname, string email, int studentAge, int days[]) {
+	this->studentId = ID;
+	this->firstName = fname;
+	this->lastName = lname;
+	this->emailAddress = email;
+	this->age = studentAge;
+	for (int i = 0; i < DAYS_ARRAY_SIZE; ++i) this->daysToCompleteEachCourse[i] = days[i];
+}
+
+
+//setters
 void Student::SetStudentId(string iD) {
 	studentId = iD;
 
@@ -34,7 +59,7 @@ void Student::SetAge(int studentAge) {
 
 void Student::SetDaysToCompleteEachCourse(int* newDays) {
 	int i = 0; //loop variable
-	for (i = 0; i < SIZE; ++i) {
+	for (i = 0; i < DAYS_ARRAY_SIZE; ++i) {
 		daysToCompleteEachCourse[i] = newDays[i];
 	}
 	return;
@@ -45,6 +70,7 @@ void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {
 	return;
 }
 
+//getters
 string Student::GetStudentId() const {
 	return studentId;
 }
@@ -79,9 +105,9 @@ void Student::Print() {
 	cout << "{";
 
 	int i = 0;
-	for (i = 0; i < SIZE; ++i) {
+	for (i = 0; i < DAYS_ARRAY_SIZE; ++i) {
 		cout << daysToCompleteEachCourse[i];
-		if (i != SIZE - 1) {
+		if (i != DAYS_ARRAY_SIZE - 1) {
 			cout << ", ";
 		}
 	}
@@ -102,16 +128,4 @@ void Student::Print() {
 }
 
 
-//Default Constructor
-Student::Student() {
-	studentId = "NoId";
-	firstName = "NoName";
-	lastName  = "NoName";
-	emailAddress = "NoAddress";
-	age = 0;
-	for (int i = 0; i < SIZE; ++i) {
-		daysToCompleteEachCourse[i] = 0;
-	}
-	degreeProgram = SOFTWARE;
-}
 

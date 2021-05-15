@@ -6,6 +6,8 @@ using namespace std;
 #pragma once
 
 enum DegreeProgram { SECURITY, NETWORK, SOFTWARE };
-//string degreeTypeStrings [] = { "SECURITY", "NETWORK, SOFTWARE" }; //FIXME: MIGHT NOT USER
+
+
+static const string degreeProgramStrings [] = { "SECURITY", "NETWORK, SOFTWARE" }; 
 
 #endif 

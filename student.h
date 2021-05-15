@@ -5,38 +5,52 @@
 #include "degree.h"
 using namespace std;
 
-class Student {
+class Student { //This class represents a Student
 	public:
+		static const int DAYS_ARRAY_SIZE = 3;
+	
+	protected:
+        string studentId;
+		string firstName;
+		string lastName;
+		string emailAddress;
+		int age;
+		int daysToCompleteEachCourse[DAYS_ARRAY_SIZE];
+		DegreeProgram degreeProgram;
 
+
+	public:
+		//setters
 		void SetStudentId(string iD); 
 		void SetFirstName(string studentFirstName); 
 		void SetLastName(string studentLastName); 
 		void SetEmailAddress(string studentEmail); 
 		void SetAge(int studentAge); 
-		void SetDaysToCompleteEachCourse(int* newDays); 
-		void SetDegreeProgram(DegreeProgram degreeProgram); 
-		Student(); 
+		void SetDaysToCompleteEachCourse(int days[]); 
 
+	   //void SetDegreeProgram(DegreeProgram degreeProgram); FIXME: May not need.
+
+		//constructors
+		Student(); 
+		Student(string ID, string fname, string lname, string email, int studentAge, int days[]);
+
+		//getters
 		string        GetStudentId() const;  
 	    string        GetFirstName() const; 
 		string        GetLastName() const; 
 		string        GetEmailAddress() const; 
 		int           GetAge() const; 
 		const int*    GetDaysToCompleteEachCourse() const; 
-		DegreeProgram GetDegreeProgram() const; 
+		virtual DegreeProgram GetDegreeProgram() = 0; 
 
-		void Print(); //FIXME: Create a print function
+		//print function
+		virtual void Print() = 0; //FIXME: Create a print function
 
-		static const int SIZE = 3;
+		//destructor
+		~Student();
    
-   private:
-	    string studentId;
-		string firstName;
-		string lastName;
-		string emailAddress;
-		int age;
-		int daysToCompleteEachCourse[SIZE];
-		DegreeProgram degreeProgram; 
+	private:
+	   
 };
 
 #endif
