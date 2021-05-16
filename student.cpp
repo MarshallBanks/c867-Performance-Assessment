@@ -31,44 +31,35 @@ Student::Student(string ID, string fname, string lname, string email, int studen
 //setters
 void Student::SetStudentId(string iD) {
 	studentId = iD;
-
-	return;
 }
 
 void Student::SetFirstName(string studentFirstName) {
 	firstName = studentFirstName;
-
-	return;
 }
 
 void Student::SetLastName(string studentLastName) {
 	lastName = studentLastName;
-
-	return;
 }
 
 void Student::SetEmailAddress(string studentEmail) {
 	emailAddress = studentEmail;
-	return;
 }
 
 void Student::SetAge(int studentAge) {
 	age = studentAge;
-	return;
 }
 
-void Student::SetDaysToCompleteEachCourse(int* newDays) {
-	int i = 0; //loop variable
-	for (i = 0; i < DAYS_ARRAY_SIZE; ++i) {
-		daysToCompleteEachCourse[i] = newDays[i];
+void Student::SetDaysToCompleteEachCourse(int days[]) {
+
+	for (int i = 0; i < DAYS_ARRAY_SIZE; ++i) {
+		daysToCompleteEachCourse[i] = days[i];
 	}
-	return;
 }
 
-void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {
+//FIXME: May not need at all
+/*void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {
 	degreeProgram = studentDegreeProgram;
-	return;
-}
+}*/
 
 //getters
 string Student::GetStudentId() const {
@@ -91,13 +82,14 @@ int Student::GetAge() const {
 	return age;
 }
 
-const int* Student::GetDaysToCompleteEachCourse() const {
+const int * Student::GetDaysToCompleteEachCourse() const {
 	return daysToCompleteEachCourse;
 }
 
-DegreeProgram Student::GetDegreeProgram() const {
+//May not need at all. 
+/*DegreeProgram Student::GetDegreeProgram() const {
 	return degreeProgram;
-}
+}*/ 
 
 void Student::Print() {
 	cout << studentId << '\t' << "First name: " << firstName << '\t' << "Last name: " << lastName << '\t';
