@@ -92,7 +92,22 @@ const int * Student::GetDaysToCompleteEachCourse() const {
 }*/ 
 
 void Student::Print() {
-	cout << studentId << '\t' << "First name: " << firstName << '\t' << "Last name: " << lastName << '\t';
+
+	cout << left << setw(5) << studentId;
+	cout << left << setw(45) << firstName;
+	cout << left << setw(20) << lastName;
+	cout << left << setw(10) << emailAddress;
+	cout << left << setw(10) << age;
+	cout << left << setw(10) << daysToCompleteEachCourse[0];
+	cout << left << setw(10) << daysToCompleteEachCourse[1];
+	cout << left << setw(10) << daysToCompleteEachCourse[2];
+
+}
+	
+Student::~Student() {}
+	
+	//Another way to print pulled from example project made need if we revert back away from derived classes.
+	/*cout << studentId << '\t' << "First name: " << firstName << '\t' << "Last name: " << lastName << '\t';
 	cout << "Email: " << emailAddress << '\t' << "Age: " << age << '\t' << "Days In Course: ";
 	cout << "{";
 
@@ -114,10 +129,10 @@ void Student::Print() {
 	}
 	else {
 		cout << "SOFTWARE" << endl;
-	}
+	}*/
 
-	return;
-}
+
+
 
 
 
