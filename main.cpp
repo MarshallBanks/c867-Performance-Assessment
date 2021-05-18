@@ -22,9 +22,7 @@ int main() {
 	cout << "Student ID#: 000616668" << endl;
 	cout << "Name: Marshall Banks\n" << endl;
 
-	//Student marshall; //FIXME: for iterative testing only. 
-
-	//marshall.Print(); //FIXME: for test iterative testing only. 
+  
 
 	return 0;
 }

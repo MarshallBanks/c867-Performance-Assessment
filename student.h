@@ -18,8 +18,6 @@ class Student { //This class represents a Student
 		int daysToCompleteEachCourse[DAYS_ARRAY_SIZE];
 		DegreeProgram degreeProgram;
 
-		cout << studentId
-
 
 	public:
 		//setters
