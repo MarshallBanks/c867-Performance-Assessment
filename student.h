@@ -18,6 +18,8 @@ class Student { //This class represents a Student
 		int daysToCompleteEachCourse[DAYS_ARRAY_SIZE];
 		DegreeProgram degreeProgram;
 
+		cout << studentId
+
 
 	public:
 		//setters
@@ -44,7 +46,7 @@ class Student { //This class represents a Student
 		virtual DegreeProgram GetDegreeProgram() = 0; 
 
 		//print function
-		virtual void Print() = 0; //FIXME: Create a print function
+		virtual void Print() = 0; 
 
 		//destructor
 		~Student();
