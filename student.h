@@ -2,6 +2,7 @@
 #define student_h
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "degree.h"
 using namespace std;
 
@@ -9,7 +10,7 @@ class Student { //This class represents a Student
 	public:
 		static const int DAYS_ARRAY_SIZE = 3;
 	
-	protected:
+	private:
         string studentId;
 		string firstName;
 		string lastName;
@@ -27,12 +28,11 @@ class Student { //This class represents a Student
 		void SetEmailAddress(string studentEmail); 
 		void SetAge(int studentAge); 
 		void SetDaysToCompleteEachCourse(int days[]); 
-
-	   //void SetDegreeProgram(DegreeProgram degreeProgram); FIXME: May not need.
+		void SetDegreeProgram(DegreeProgram degreeProgram); 
 
 		//constructors
 		Student(); 
-		Student(string ID, string fname, string lname, string email, int studentAge, int days[]);
+		Student(string ID, string fname, string lname, string email, int studentAge, int days[], DegreeProgram degreeProgram);
 
 		//getters
 		string        GetStudentId() const;  
@@ -40,11 +40,11 @@ class Student { //This class represents a Student
 		string        GetLastName() const; 
 		string        GetEmailAddress() const; 
 		int           GetAge() const; 
-		const int*    GetDaysToCompleteEachCourse() const; 
-		virtual DegreeProgram GetDegreeProgram() = 0; 
+		int*          GetDaysToCompleteEachCourse() const; 
+		DegreeProgram GetDegreeProgram() const;
 
 		//print function
-		virtual void Print() = 0; 
+		void Print(); 
 
 		//destructor
 		~Student();

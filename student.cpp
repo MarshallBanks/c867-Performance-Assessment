@@ -18,7 +18,7 @@ Student::Student() {
 }
 
 //Full constructor
-Student::Student(string ID, string fname, string lname, string email, int studentAge, int days[]) {
+Student::Student(string ID, string fname, string lname, string email, int studentAge, int days[], DegreeProgram degreeProgram) {
 	this->studentId = ID;
 	this->firstName = fname;
 	this->lastName = lname;
