@@ -13,6 +13,7 @@ Student::Student() {
 	this->emailAddress = "";
 	this->age = 0;
 	for (int i = 0; i < DAYS_ARRAY_SIZE; ++i) this->daysToCompleteEachCourse[i] = 0;
+	this->degreeProgram = DegreeProgram::NONE;
 	
 	
 }
@@ -25,28 +26,29 @@ Student::Student(string ID, string fname, string lname, string email, int studen
 	this->emailAddress = email;
 	this->age = studentAge;
 	for (int i = 0; i < DAYS_ARRAY_SIZE; ++i) this->daysToCompleteEachCourse[i] = days[i];
+	this->degreeProgram = degreeProgram;
 }
 
 
 //setters
 void Student::SetStudentId(string iD) {
-	studentId = iD;
+	this->studentId = iD;
 }
 
 void Student::SetFirstName(string studentFirstName) {
-	firstName = studentFirstName;
+	this->firstName = studentFirstName;
 }
 
 void Student::SetLastName(string studentLastName) {
-	lastName = studentLastName;
+	this->lastName = studentLastName;
 }
 
 void Student::SetEmailAddress(string studentEmail) {
-	emailAddress = studentEmail;
+	this->emailAddress = studentEmail;
 }
 
 void Student::SetAge(int studentAge) {
-	age = studentAge;
+	this->age = studentAge;
 }
 
 void Student::SetDaysToCompleteEachCourse(int days[]) {
@@ -56,51 +58,49 @@ void Student::SetDaysToCompleteEachCourse(int days[]) {
 	}
 }
 
-//FIXME: May not need at all
-/*void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {
-	degreeProgram = studentDegreeProgram;
-}*/
+void Student::SetDegreeProgram(DegreeProgram studentDegreeProgram) {
+	this->degreeProgram = studentDegreeProgram;
+}
 
 //getters
 string Student::GetStudentId() const {
-	return studentId;
+	return this->studentId;
 }
 
 string Student::GetFirstName() const {
-	return firstName;
+	return this->firstName;
 }
 
 string Student::GetLastName() const {
-	return lastName;
+	return this->lastName;
 }
 
 string Student::GetEmailAddress() const {
-	return emailAddress;
+	return this->emailAddress;
 }
 
 int Student::GetAge() const {
-	return age;
+	return this->age;
 }
 
-const int * Student::GetDaysToCompleteEachCourse() const {
-	return daysToCompleteEachCourse;
+int * Student::GetDaysToCompleteEachCourse() {
+	return this->daysToCompleteEachCourse;
 }
 
-//May not need at all. 
-/*DegreeProgram Student::GetDegreeProgram() const {
-	return degreeProgram;
-}*/ 
+
+DegreeProgram Student::GetDegreeProgram() const {
+	return this->degreeProgram;
+}
 
 void Student::Print() {
 
-	cout << left << setw(5) << studentId;
-	cout << left << setw(45) << firstName;
-	cout << left << setw(20) << lastName;
-	cout << left << setw(10) << emailAddress;
-	cout << left << setw(10) << age;
-	cout << left << setw(10) << daysToCompleteEachCourse[0];
-	cout << left << setw(10) << daysToCompleteEachCourse[1];
-	cout << left << setw(10) << daysToCompleteEachCourse[2];
+	cout << this->GetStudentId() << '\t';
+	cout << this->GetFirstName() << '\t';
+	cout << this->GetLastName()  << '\t';
+	cout << this->GetEmailAddress() << '\t';
+	cout << this->GetAge() << '\t';
+	cout << this->daysToCompleteEachCourse[0] << ',' << this->daysToCompleteEachCourse[1] << ',' << this->daysToCompleteEachCourse[2] << '\t';
+	cout << degreeProgramStrings[this->GetDegreeProgram()] << endl;
 
 }
 	

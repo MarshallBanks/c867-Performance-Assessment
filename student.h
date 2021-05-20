@@ -40,7 +40,7 @@ class Student { //This class represents a Student
 		string        GetLastName() const; 
 		string        GetEmailAddress() const; 
 		int           GetAge() const; 
-		int*          GetDaysToCompleteEachCourse() const; 
+		int*          GetDaysToCompleteEachCourse(); 
 		DegreeProgram GetDegreeProgram() const;
 
 		//print function
