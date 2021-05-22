@@ -8,7 +8,7 @@
 using namespace std;
 
 
-void Roster::parse(string studentDataRow) {
+void Roster::parse(string studentRow) {
 
 	//DegreeProgram degreeProgram = NONE;
 	//if (studentData.at())

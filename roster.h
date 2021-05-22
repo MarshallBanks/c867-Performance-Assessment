@@ -19,7 +19,7 @@ class Roster {
 		void printAverageDaysInCourse();
 		void printByDegree(DegreeProgram degreeProgram);
 		void printInvalidEmails();
-		void parse(string studentDataRow);
+		void parse(string studentRow);
 
 		~Roster(); 
 
