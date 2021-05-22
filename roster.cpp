@@ -8,7 +8,7 @@
 using namespace std;
 
 
-void Roster::parse(string studentRow) {
+void Roster::parse(string studentDataRow) {
 
 	//DegreeProgram degreeProgram = NONE;
 	//if (studentData.at())
@@ -65,25 +65,32 @@ void Roster::parse(string studentRow) {
 
 void Roster::add(string studentID, string firstName, string lastName,
 	string emailAddress, int age, int daysInCourse1, int daysInCourse2,
-	int daysInCourse3, DegreeProgram degreeprogram) {
+	int daysInCourse3, DegreeProgram degreeProgram) {
 
+	int daysArray[3] = { daysInCourse1, daysInCourse2, daysInCourse3 };
+
+	classRosterArray[++indexPos] = new Student(studentID, firstName, lastName, emailAddress, age, daysArray, degreeProgram);
 
 }
-//Need to fix so it can grab studentData[] from main.cpp
-/*void Roster::parse() {
-	for (int i = 0; i < numStudents; ++i) {
-		string currentString = studentData[i];
-		vector<string> result;
-		stringstream s_stream(currentString);
 
-		while (s_stream.good()) {
-			string substr;
-			getline(s_stream, substr, ',');
-			result.push_back(substr);
-		}
-		for (int j = 0; j < result.size(); j++) {
-			cout << result.at(j) << endl;
-		}
+void Roster::printAll() {
+	
+	
+	for (int i = 0; i <= Roster::indexPos; i++) {
+		cout << /*No label needed*/   classRosterArray[i]->GetStudentId() << '\t';
+		cout << "First Name: "     << classRosterArray[i]->GetFirstName() << '\t';
+		cout << "Last Name: "      << classRosterArray[i]->GetLastName() << '\t';
+		cout << "Age: "            << classRosterArray[i]->GetAge() << '\t';
+		cout << "daysInCourse: {"  << classRosterArray[i]->GetDaysToCompleteEachCourse()[0] << ", "
+		                           << classRosterArray[i]->GetDaysToCompleteEachCourse()[1] << ", "
+		                           << classRosterArray[i]->GetDaysToCompleteEachCourse()[2] << "} ";
+		cout << "Degree Program: " << degreeProgramStrings[classRosterArray[i]->GetDegreeProgram()] << endl;
 	}
-}*/
+}
+
+
+
+
+
+
 
