@@ -17,7 +17,7 @@ class Roster {
 		void remove(string studentID); //Searches array for ID and deletes it 
 		void printAll(); //calls print() from student class for each student object
 		void printAverageDaysInCourse();
-		void printByDegree(DegreeProgram degreeProgram);
+		void printByDegreeProgram(DegreeProgram degreeProgram);
 		void printInvalidEmails();
 		void parse(string studentRow);
 
