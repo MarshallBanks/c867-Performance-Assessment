@@ -22,7 +22,19 @@ int main() {
 	cout << "Student ID#: 000616668" << endl;
 	cout << "Name: Marshall Banks\n" << endl;
 
-  
+	/*Marshall object for testing only*/
+	/*Student Marshall;
+	int testArray[3] = { 0,1,2 };
+
+	Marshall.SetStudentId("A1");
+	Marshall.SetFirstName("Marshall");
+	Marshall.SetLastName("Banks");
+	Marshall.SetEmailAddress("marshallmelonhead@hotmail.com");
+	Marshall.SetDaysToCompleteEachCourse(testArray);
+	Marshall.SetDegreeProgram(SOFTWARE);
+
+	Marshall.Print();*/
+	
 
 	return 0;
 }

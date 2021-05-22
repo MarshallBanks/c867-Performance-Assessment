@@ -94,13 +94,12 @@ DegreeProgram Student::GetDegreeProgram() const {
 
 void Student::Print() {
 
-	cout << this->GetStudentId() << '\t';
-	cout << this->GetFirstName() << '\t';
-	cout << this->GetLastName()  << '\t';
-	cout << this->GetEmailAddress() << '\t';
-	cout << this->GetAge() << '\t';
-	cout << this->daysToCompleteEachCourse[0] << ',' << this->daysToCompleteEachCourse[1] << ',' << this->daysToCompleteEachCourse[2] << '\t';
-	cout << degreeProgramStrings[this->GetDegreeProgram()] << endl;
+	cout << /*No label needed*/   this->GetStudentId() << '\t';
+	cout << "First Name: "     << this->GetFirstName() << '\t';
+	cout << "Last Name: "      << this->GetLastName()  << '\t';
+	cout << "Age: "            << this->GetAge() << '\t';
+	cout << "daysInCourse: {"  << this->daysToCompleteEachCourse[0] << ',' << this->daysToCompleteEachCourse[1] << ',' << this->daysToCompleteEachCourse[2] << "} ";
+	cout << "Degree Program: " << degreeProgramStrings[this->GetDegreeProgram()] << endl;
 
 }
 	

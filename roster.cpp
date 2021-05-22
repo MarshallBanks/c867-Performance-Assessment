@@ -88,7 +88,9 @@ void Roster::printAll() {
 	}
 }
 
+void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
 
+}
 
 
 
