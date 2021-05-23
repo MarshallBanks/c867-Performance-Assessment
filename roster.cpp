@@ -89,9 +89,39 @@ void Roster::printAll() {
 }
 
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
-
+	
+	for (int i = 0; i <= Roster::indexPos; i++) {
+		if (classRosterArray[i]->GetDegreeProgram() == degreeProgram) {
+			classRosterArray[i]->Print();
+		}
+		cout << endl;
+	}
 }
 
+void Roster::printInvalidEmails() {
+
+	bool invalidEmail = false;
+	for (int i = 0; i <= Roster::indexPos; i++) {
+
+		string email = (classRosterArray[i]->GetEmailAddress());
+		if (email.find(' ') == string::npos) {
+			invalidEmail = true;
+			cout << email << " - no spaces allowed." << endl;
+		}
+		if (email.find('@') != string::npos) {
+			invalidEmail = true;
+			cout << email << " - must have an @ symbol." << endl;
+		}
+		if (email.find('.') != string::npos) {
+			invalidEmail = true;
+			cout << email << " - must have a period." << endl;
+		}
+		
+	}
+	if (!invalidEmail) {
+		cout << "No invalid eMails found." << endl;
+	}
+}
 
 
 
