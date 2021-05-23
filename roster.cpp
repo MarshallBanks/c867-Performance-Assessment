@@ -123,6 +123,21 @@ void Roster::printInvalidEmails() {
 	}
 }
 
+void Roster::printAverageDaysInCourse() {
+
+	for (int i = 0; i < Roster::indexPos; i++) {
+		int average = 
+		 ((classRosterArray[i]->GetDaysToCompleteEachCourse()[0])
+		+ (classRosterArray[i]->GetDaysToCompleteEachCourse()[1])
+		+ (classRosterArray[i]->GetDaysToCompleteEachCourse()[2])) / 3; 
+
+		cout << "Student ID: " << classRosterArray[i]->GetStudentId() << ", averages " << average << "days in a course." << endl;
+	}
+	cout << endl;
+}
+
+
+
 
 
 
