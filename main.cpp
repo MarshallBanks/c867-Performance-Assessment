@@ -22,6 +22,9 @@ int main() {
 	cout << "Student ID#: 000616668" << endl;
 	cout << "Name: Marshall Banks\n" << endl;
 
+	const int numStudents = 5;
+	Roster roster;
+	int i = 0;
 	/*Marshall object for testing only*/
 	/*Student Marshall;
 	int testArray[3] = { 0,1,2 };
@@ -34,7 +37,16 @@ int main() {
 	Marshall.SetDegreeProgram(SOFTWARE);
 
 	Marshall.Print();*/
-	
 
+	for (i = 0; i < numStudents; i++) {
+		roster.parse(studentData[i]);
+	}
+	cout << "Displaying all students:" << endl;
+	roster.printAll();
+	cout << endl;
+	
+	for (i = 0; i < 3; i++) {
+		cout << "Displaying students by Degree Program " << ;
+	}
 	return 0;
 }
