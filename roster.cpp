@@ -76,7 +76,7 @@ void Roster::add(string studentID, string firstName, string lastName,
 void Roster::printAll() {
 	
 	
-	for (int i = 0; i <= Roster::indexPos; i++) {
+	for (int i = 0; i <= indexPos; i++) {
 		cout << /*No label needed*/   classRosterArray[i]->GetStudentId() << '\t';
 		cout << "First Name: "     << classRosterArray[i]->GetFirstName() << '\t';
 		cout << "Last Name: "      << classRosterArray[i]->GetLastName() << '\t';
@@ -90,7 +90,7 @@ void Roster::printAll() {
 
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
 	
-	for (int i = 0; i <= Roster::indexPos; i++) {
+	for (int i = 0; i <= indexPos; i++) {
 		if (classRosterArray[i]->GetDegreeProgram() == degreeProgram) {
 			classRosterArray[i]->Print();
 		}
@@ -101,7 +101,7 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
 void Roster::printInvalidEmails() {
 
 	bool invalidEmail = false;
-	for (int i = 0; i <= Roster::indexPos; i++) {
+	for (int i = 0; i <= indexPos; i++) {
 
 		string email = (classRosterArray[i]->GetEmailAddress());
 		if (email.find(' ') == string::npos) {
@@ -125,7 +125,7 @@ void Roster::printInvalidEmails() {
 
 void Roster::printAverageDaysInCourse() {
 
-	for (int i = 0; i < Roster::indexPos; i++) {
+	for (int i = 0; i < indexPos; i++) {
 		int average = 
 		 ((classRosterArray[i]->GetDaysToCompleteEachCourse()[0])
 		+ (classRosterArray[i]->GetDaysToCompleteEachCourse()[1])
@@ -136,6 +136,33 @@ void Roster::printAverageDaysInCourse() {
 	cout << endl;
 }
 
+void Roster::remove(string studentID) {
+
+	bool foundId = false;
+
+	for (int i = 0; i <= indexPos; i++) {
+
+		if (classRosterArray[i]->GetStudentId() == studentID) {
+			foundId = true;
+
+			if (i < numStudents - 1) {
+				Student* tempObject = classRosterArray[i];
+				classRosterArray[i] = classRosterArray[numStudents - 1];
+				classRosterArray[numStudents - 1] = tempObject;
+			}
+			Roster::indexPos--;
+		}
+	}
+
+	if (foundId == true) {
+		cout << studentID << " removed from the student roster." << endl;
+		this->printAll();
+	}
+	else {
+		cout << studentID << " was not found." << endl;
+	}
+
+}
 
 
 
