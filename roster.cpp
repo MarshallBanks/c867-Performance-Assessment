@@ -164,6 +164,12 @@ void Roster::remove(string studentID) {
 
 }
 
+Roster::~Roster() {
+	for (int i = 0; i < numStudents; i++) {
+		delete classRosterArray[i];
+		classRosterArray[i] = nullptr;
+	}
+}
 
 
 
