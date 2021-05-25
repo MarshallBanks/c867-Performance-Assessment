@@ -75,8 +75,6 @@ void Roster::add(string studentID, string firstName, string lastName,
 
 void Roster::printAll() {
 	
-	cout << "Displaying all students: " << endl;
-	
 	for (int i = 0; i <= indexPos; i++) {
 		cout << /*No label needed*/   classRosterArray[i]->GetStudentId() << '\t';
 		cout << "First Name: "     << classRosterArray[i]->GetFirstName() << '\t';
@@ -87,35 +85,38 @@ void Roster::printAll() {
 		                           << classRosterArray[i]->GetDaysToCompleteEachCourse()[2] << "} ";
 		cout << "Degree Program: " << degreeProgramStrings[classRosterArray[i]->GetDegreeProgram()] << endl;
 	}
+	cout << endl;
 }
 
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
 
-	cout << "Printing students in degree program: " << degreeProgramStrings[degreeProgram] << endl;
+	cout << "Printing students in degree program: " << degreeProgramStrings[degreeProgram] << "\n\n";
 	
 	for (int i = 0; i <= indexPos; i++) {
 		if (classRosterArray[i]->GetDegreeProgram() == degreeProgram) {
 			classRosterArray[i]->Print();
 		}
-		cout << endl;
 	}
+	cout << endl;
 }
 
 void Roster::printInvalidEmails() {
+
+	cout << "Displaying invalid emails: \n\n";
 
 	bool invalidEmail = false;
 	for (int i = 0; i <= indexPos; i++) {
 
 		string email = (classRosterArray[i]->GetEmailAddress());
-		if (email.find(' ') == string::npos) {
+		if (email.find(' ') != string::npos) {
 			invalidEmail = true;
 			cout << email << " - no spaces allowed." << endl;
 		}
-		if (email.find('@') != string::npos) {
+		if (email.find('@') == string::npos) {
 			invalidEmail = true;
 			cout << email << " - must have an @ symbol." << endl;
 		}
-		if (email.find('.') != string::npos) {
+		if (email.find('.') == string::npos) {
 			invalidEmail = true;
 			cout << email << " - must have a period." << endl;
 		}
@@ -124,6 +125,7 @@ void Roster::printInvalidEmails() {
 	if (!invalidEmail) {
 		cout << "No invalid eMails found." << endl;
 	}
+	cout << endl;
 }
 
 void Roster::printAverageDaysInCourse() {
@@ -158,13 +160,13 @@ void Roster::remove(string studentID) {
 	}
 
 	if (foundId == true) {
-		cout << studentID << " removed from the student roster." << endl;
+		cout << "Student " << studentID << " removed from the student roster.\n" << endl;
 		this->printAll();
 	}
 	else {
 		cout << studentID << " was not found." << endl;
 	}
-
+	cout << endl;
 }
 
 Roster::~Roster() {

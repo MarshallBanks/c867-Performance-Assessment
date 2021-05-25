@@ -41,16 +41,18 @@ int main() {
 	for (i = 0; i < numStudents; i++) {
 		roster.parse(studentData[i]);
 	}
+
 	cout << "Displaying all students:" << endl;
 	roster.printAll();
-	cout << endl;
 
-	cout << 
 	roster.printInvalidEmails();
 	
-	cout <<  "Showing students in degree program: SOFTWARE" << endl;
 	roster.printByDegreeProgram(SOFTWARE);
 
+	roster.remove("A3");
+
+	cout << "Removing A3 again:" << endl;
+	roster.remove("A3");
 	
 	
 	return 0;
