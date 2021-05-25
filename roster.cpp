@@ -75,6 +75,7 @@ void Roster::add(string studentID, string firstName, string lastName,
 
 void Roster::printAll() {
 	
+	cout << "Displaying all students: " << endl;
 	
 	for (int i = 0; i <= indexPos; i++) {
 		cout << /*No label needed*/   classRosterArray[i]->GetStudentId() << '\t';
@@ -90,7 +91,7 @@ void Roster::printAll() {
 
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
 
-	cout << "Printing students in degree program: " << degreeProgramStrings[degreeProgram];
+	cout << "Printing students in degree program: " << degreeProgramStrings[degreeProgram] << endl;
 	
 	for (int i = 0; i <= indexPos; i++) {
 		if (classRosterArray[i]->GetDegreeProgram() == degreeProgram) {
