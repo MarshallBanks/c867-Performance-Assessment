@@ -44,9 +44,14 @@ int main() {
 	cout << "Displaying all students:" << endl;
 	roster.printAll();
 	cout << endl;
+
+	cout << 
+	roster.printInvalidEmails();
 	
-	for (i = 0; i < 3; i++) {
-		cout << "Displaying students by Degree Program " << ;
-	}
+	cout <<  "Showing students in degree program: SOFTWARE" << endl;
+	roster.printByDegreeProgram(SOFTWARE);
+
+	
+	
 	return 0;
 }

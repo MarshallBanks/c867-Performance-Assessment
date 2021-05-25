@@ -89,6 +89,8 @@ void Roster::printAll() {
 }
 
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
+
+	cout << "Printing students in degree program: " << degreeProgramStrings[degreeProgram];
 	
 	for (int i = 0; i <= indexPos; i++) {
 		if (classRosterArray[i]->GetDegreeProgram() == degreeProgram) {
