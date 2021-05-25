@@ -25,19 +25,7 @@ int main() {
 	const int numStudents = 5;
 	Roster roster;
 	int i = 0;
-	/*Marshall object for testing only*/
-	/*Student Marshall;
-	int testArray[3] = { 0,1,2 };
-
-	Marshall.SetStudentId("A1");
-	Marshall.SetFirstName("Marshall");
-	Marshall.SetLastName("Banks");
-	Marshall.SetEmailAddress("marshallmelonhead@hotmail.com");
-	Marshall.SetDaysToCompleteEachCourse(testArray);
-	Marshall.SetDegreeProgram(SOFTWARE);
-
-	Marshall.Print();*/
-
+	
 	for (i = 0; i < numStudents; i++) {
 		roster.parse(studentData[i]);
 	}
@@ -46,12 +34,13 @@ int main() {
 	roster.printAll();
 
 	roster.printInvalidEmails();
+
+	roster.printAverageDaysInCourse();
 	
 	roster.printByDegreeProgram(SOFTWARE);
 
 	roster.remove("A3");
 
-	cout << "Removing A3 again:" << endl;
 	roster.remove("A3");
 	
 	

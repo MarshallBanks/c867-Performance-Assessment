@@ -104,32 +104,6 @@ void Student::Print() {
 }
 	
 Student::~Student() {}
-	
-	//Another way to print pulled from example project made need if we revert back away from derived classes.
-	/*cout << studentId << '\t' << "First name: " << firstName << '\t' << "Last name: " << lastName << '\t';
-	cout << "Email: " << emailAddress << '\t' << "Age: " << age << '\t' << "Days In Course: ";
-	cout << "{";
-
-	int i = 0;
-	for (i = 0; i < DAYS_ARRAY_SIZE; ++i) {
-		cout << daysToCompleteEachCourse[i];
-		if (i != DAYS_ARRAY_SIZE - 1) {
-			cout << ", ";
-		}
-	}
-
-	cout << "}" << '\t' << "Degree Program: ";
-
-	if (degreeProgram == SECURITY) {
-		cout << "SECURITY" << endl;
-	}
-	else if (degreeProgram == NETWORK) {
-		cout << "NETWORK" << endl;
-	}
-	else {
-		cout << "SOFTWARE" << endl;
-	}*/
-
 
 
 

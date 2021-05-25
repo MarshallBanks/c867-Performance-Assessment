@@ -10,9 +10,6 @@ using namespace std;
 
 void Roster::parse(string studentRow) {
 
-	//DegreeProgram degreeProgram = NONE;
-	//if (studentData.at())
-
 	DegreeProgram dprogram = NONE;
 
 	int firstComma = studentRow.find(","); //gets location of the comma
@@ -90,7 +87,7 @@ void Roster::printAll() {
 
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
 
-	cout << "Printing students in degree program: " << degreeProgramStrings[degreeProgram] << "\n\n";
+	cout << "Showing students in degree program: " << degreeProgramStrings[degreeProgram] << "\n\n";
 	
 	for (int i = 0; i <= indexPos; i++) {
 		if (classRosterArray[i]->GetDegreeProgram() == degreeProgram) {
@@ -130,7 +127,7 @@ void Roster::printInvalidEmails() {
 
 void Roster::printAverageDaysInCourse() {
 
-	for (int i = 0; i < indexPos; i++) {
+	for (int i = 0; i <= indexPos; i++) {
 		int average = 
 		 ((classRosterArray[i]->GetDaysToCompleteEachCourse()[0])
 		+ (classRosterArray[i]->GetDaysToCompleteEachCourse()[1])
@@ -142,6 +139,8 @@ void Roster::printAverageDaysInCourse() {
 }
 
 void Roster::remove(string studentID) {
+
+	cout << "Removing " << studentID << ":\n" << endl;
 
 	bool foundId = false;
 
