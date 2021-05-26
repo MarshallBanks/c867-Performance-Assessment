@@ -13,7 +13,7 @@ void Roster::parse(string studentRow) {
 	DegreeProgram dprogram = NONE;
 
 	int firstComma = studentRow.find(","); //gets location of the comma
-	string sID = studentRow.substr(0, firstComma); //gets substring from just before the firstCommaLoc
+	string sID = studentRow.substr(0, firstComma); //gets substring from just before the firstComma
 
 	int secondComma = studentRow.find(",", (firstComma + 1));
 	int afterLastComma = firstComma + 1;
@@ -87,7 +87,7 @@ void Roster::printAll() {
 
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
 
-	cout << "Showing students in degree program: " << degreeProgramStrings[degreeProgram] << "\n\n";
+	cout << "\nShowing students in degree program: " << degreeProgramStrings[degreeProgram] << "\n\n";
 	
 	for (int i = 0; i <= indexPos; i++) {
 		if (classRosterArray[i]->GetDegreeProgram() == degreeProgram) {
@@ -125,17 +125,18 @@ void Roster::printInvalidEmails() {
 	cout << endl;
 }
 
-void Roster::printAverageDaysInCourse() {
+void Roster::printAverageDaysInCourse(string StudentID) {
 
 	for (int i = 0; i <= indexPos; i++) {
-		int average = 
-		 ((classRosterArray[i]->GetDaysToCompleteEachCourse()[0])
-		+ (classRosterArray[i]->GetDaysToCompleteEachCourse()[1])
-		+ (classRosterArray[i]->GetDaysToCompleteEachCourse()[2])) / 3; 
+		if (classRosterArray[i]->GetStudentId() == StudentID) {
+			int average =
+			((classRosterArray[i]->GetDaysToCompleteEachCourse()[0])
+			+ (classRosterArray[i]->GetDaysToCompleteEachCourse()[1])
+			+ (classRosterArray[i]->GetDaysToCompleteEachCourse()[2])) / 3;
 
-		cout << "Student ID: " << classRosterArray[i]->GetStudentId() << ", averages " << average << "days in a course." << endl;
+			cout << "Student ID: " << StudentID << ", averages " << average << "days in a course." << endl;
+		}
 	}
-	cout << endl;
 }
 
 void Roster::remove(string studentID) {
@@ -159,8 +160,7 @@ void Roster::remove(string studentID) {
 	}
 
 	if (foundId == true) {
-		cout << "Student " << studentID << " removed from the student roster.\n" << endl;
-		this->printAll();
+		cout << "Student " << studentID << " removed from the student roster." << endl;
 	}
 	else {
 		cout << studentID << " was not found." << endl;

@@ -16,14 +16,14 @@ class Roster {
 		   int daysInCourse3, DegreeProgram degreeProgram);
 		void remove(string studentID); //Searches array for ID and deletes it 
 		void printAll(); //calls print() from student class for each student object
-		void printAverageDaysInCourse();
+		void printAverageDaysInCourse(string StudentID);
 		void printByDegreeProgram(DegreeProgram degreeProgram);
 		void printInvalidEmails();
 		void parse(string studentRow);
 
 		~Roster(); 
 
-	private:
+	public:
 		Student * classRosterArray[5];
 		const int numStudents = 5;
 		int indexPos = -1;

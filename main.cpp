@@ -23,25 +23,29 @@ int main() {
 	cout << "Name: Marshall Banks\n" << endl;
 
 	const int numStudents = 5;
-	Roster roster;
+	Roster classRoster;
 	int i = 0;
 	
 	for (i = 0; i < numStudents; i++) {
-		roster.parse(studentData[i]);
+		classRoster.parse(studentData[i]);
 	}
 
 	cout << "Displaying all students:" << endl;
-	roster.printAll();
+	classRoster.printAll();
 
-	roster.printInvalidEmails();
+	classRoster.printInvalidEmails();
 
-	roster.printAverageDaysInCourse();
-	
-	roster.printByDegreeProgram(SOFTWARE);
+	for (i = 0; i < numStudents; i++) {
+		classRoster.printAverageDaysInCourse(classRoster.classRosterArray[i]->GetStudentId());
+	}
 
-	roster.remove("A3");
+	classRoster.printByDegreeProgram(SOFTWARE);
 
-	roster.remove("A3");
+	classRoster.remove("A3");
+
+	classRoster.printAll();
+
+	classRoster.remove("A3");
 	
 	
 	return 0;
