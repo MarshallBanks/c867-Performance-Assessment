@@ -71,16 +71,9 @@ void Roster::add(string studentID, string firstName, string lastName,
 }
 
 void Roster::printAll() {
-	
+
 	for (int i = 0; i <= indexPos; i++) {
-		cout << /*No label needed*/   classRosterArray[i]->GetStudentId() << '\t';
-		cout << "First Name: "     << classRosterArray[i]->GetFirstName() << '\t';
-		cout << "Last Name: "      << classRosterArray[i]->GetLastName() << '\t';
-		cout << "Age: "            << classRosterArray[i]->GetAge() << '\t';
-		cout << "daysInCourse: {"  << classRosterArray[i]->GetDaysToCompleteEachCourse()[0] << ", "
-		                           << classRosterArray[i]->GetDaysToCompleteEachCourse()[1] << ", "
-		                           << classRosterArray[i]->GetDaysToCompleteEachCourse()[2] << "} ";
-		cout << "Degree Program: " << degreeProgramStrings[classRosterArray[i]->GetDegreeProgram()] << endl;
+		classRosterArray[i]->Print();
 	}
 	cout << endl;
 }
